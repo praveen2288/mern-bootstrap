@@ -1,12 +1,15 @@
 const path = require("path");
-const entryFile = path.resolve(__dirname, "src", "public", "index.js");
+const entryFiles = {
+  index: path.resolve(__dirname, "src", "public", "index.js"),
+  dependencies: path.resolve(__dirname, "src", "public", "dependencies.js")
+};
 const outputDir = path.resolve(__dirname, "src", "public");
 
 module.exports = {
   mode: "production",
-  entry: entryFile,
+  entry: entryFiles,
   output: {
-    filename: "bundle.js",
+    filename: "[name].bundle.js",
     path: outputDir
   },
   module: {

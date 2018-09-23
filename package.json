@@ -10,8 +10,9 @@
     "popper.js": "^1.14.4"
   },
   "scripts": {
-    "test": "nodemon src/server/index.js",
-    "start": "npm test & webpack-dev-server --hot --inline --open"
+    "build": "webpack --mode development",
+    "backend": "nodemon src/server/index.js",
+    "start": "npm run backend & webpack-dev-server --hot --inline --open"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
