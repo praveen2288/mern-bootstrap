@@ -3,7 +3,7 @@ const entryFiles = {
   index: path.resolve(__dirname, "src", "public", "index.js"),
   dependencies: path.resolve(__dirname, "src", "public", "dependencies.js")
 };
-const outputDir = path.resolve(__dirname, "src", "public");
+const outputDir = path.resolve(__dirname, "src", "public", "dist");
 
 module.exports = {
   mode: "production",
